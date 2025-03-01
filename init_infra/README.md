@@ -1,6 +1,6 @@
 # Terraform Remote Backend Infrastructure
 
-This Terraform module sets up the base infrastructure required for storing Terraform state remotely using AWS S3 and DynamoDB for state locking.
+This Terraform module sets up the base infrastructure required for storing Terraform state remotely using AWS S3.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ export AWS_PROFILE=<AWS_PROFILE>
 
 ## Deploy Initialization Resources
 
-This setup creates an S3 bucket to store Terraform state and a DynamoDB table to manage state locking.
+This setup creates an S3 bucket to store Terraform state and state locking.
 
 ### Configure Variables
 
@@ -27,7 +27,6 @@ Create a `terraform.tfvars` file with the required configuration values like thi
 ```hcl
 aws_region                          = "<AWS_REGION>"
 terraform_state_bucket              = "<TERRAFORM_STATE_S3_BUCKET_NAME>"
-terraform_state_lock_dynamodb_table = "<TERRAFORM_STATE_DYNAMODB_TABLE_NAME>"
 ```
 
 ### Initialize and Apply Terraform Configuration
