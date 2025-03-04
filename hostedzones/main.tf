@@ -4,7 +4,7 @@ provider "aws" {
   default_tags {
     tags = {
       Owner   = "Bugfloyd"
-      Service = "Bugfloyd/Core"
+      Service = "Bugfloyd/Websites"
     }
   }
 }
